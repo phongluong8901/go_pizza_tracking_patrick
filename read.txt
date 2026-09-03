@@ -10,5 +10,5 @@ mkdir internal/models, templates/static, data, cmd
 
 --- run
 cd proj_1
-
+go run ./cmd
 

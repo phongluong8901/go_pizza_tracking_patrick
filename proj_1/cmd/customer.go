@@ -8,6 +8,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type CustomerData struct {
+	Title    string
+	Order    models.Order
+	Statuses []string
+}
+
 // Cấu trúc chứa dữ liệu truyền vào giao diện form đặt hàng (order.tmpl)
 // bao gồm danh sách các loại và kích cỡ pizza có sẵn.
 type OrderFormData struct {
@@ -92,7 +98,9 @@ func (h *Handler) serveCustomer(c *gin.Context) {
 	}
 
 	//Hiển thị giao diện: Trả về file giao diện "customer.tmpl" với mã trạng thái 200 OK, kèm theo đối tượng dữ liệu đơn hàng vừa tìm được để hiển thị tiến trình làm pizza cho khách hàng.
-	c.HTML(http.StatusOK, "customer.tmpl", gin.H{
-		"Order": order,
+	c.HTML(http.StatusOK, "customer.tmpl", CustomerData{
+		Title:    "PizzaOrder Status" + orderID,
+		Order:    *order,
+		Statuses: models.OrderStatuses,
 	})
 }

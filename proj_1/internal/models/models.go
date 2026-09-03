@@ -10,6 +10,8 @@ import (
 // Tạo một struct tổng hợp để chứa tất cả các mô hình dữ liệu
 type DBModel struct {
 	Order OrderModel
+	User  UserModel
+	DB    *gorm.DB
 }
 
 func InitDB(dataSourceName string) (*DBModel, error) {
