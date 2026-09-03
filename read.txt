@@ -1,0 +1,14 @@
+--- source
+https://github.com/patni1992/go-pizza-tracker
+
+--- install
+cd proj_1
+go mod init pizza-tracker-go
+go mod tidy
+
+mkdir internal/models, templates/static, data, cmd
+
+--- run
+cd proj_1
+
+
