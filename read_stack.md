@@ -23,5 +23,6 @@
 
 (https://github.com/go-playground/validator/v10)": Thư viện validator ngầm định mà Gin sử dụng để kiểm tra tính hợp lệ của struct (ví dụ: validate:"required").
 
+"log/slog" và "os": Thư viện dùng để ghi log chuẩn và thao tác với hệ điều hành (như kết thúc chương trình bằng mã lỗi).
 
 # --- stack
